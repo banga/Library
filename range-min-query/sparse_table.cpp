@@ -29,18 +29,14 @@ void SWAP(T& a, T& b) {
   b = t;
 }
 
-typedef struct SparseTable SparseTable;
-
-struct SparseTable {
-  SparseTable(int* a, int n)
-  : max(n), logmax(0), A(0), M(0) {
+template <class T>
+class SparseTable {
+  public:
+  SparseTable(T* a, int n)
+  : max(n), logmax(0), A(a), M(0) {
     while((1 << logmax) <= max)
       logmax++;
     logmax++;
-
-    A = new int[max];
-    for(int i = 0; i < max; i++)
-      A[i] = a[i];
 
     M = new int*[logmax];
     for(int i = 0; i < logmax; i++)
@@ -91,7 +87,8 @@ struct SparseTable {
 
   private:
   int max, logmax;
-  int *A, **M;
+  T *A;
+  int **M;
 
   SparseTable(const SparseTable& t)
   : max(t.max), logmax(t.logmax), A(0), M(0) {
@@ -114,7 +111,7 @@ int main() {
   int a[] = {7, 5, 9, 4, 8, 3, 6, 2, 1};
   int count = sizeof(a) / sizeof(int);
 
-  SparseTable t(a, count);
+  SparseTable<int> t(a, count);
 
   for(int i = 0; i < count; i++) {
     for(int j = i; j < count; j++) {
