@@ -1,0 +1,47 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+append	.\flatten.cpp	/^		static void append(node2** pHead, node2* n) {$/;"	f	class:node2	access:public	signature:(node2** pHead, node2* n)
+append	.\linked-list.h	/^	static void append(node** pHead, node* n) {$/;"	f	class:node	access:public	signature:(node** pHead, node* n)
+build_list	.\flatten.cpp	/^		static node2* build_list(T* items, int count) {$/;"	f	class:node2	access:public	signature:(T* items, int count)
+build_list	.\flatten.cpp	/^		static node2* build_list(node2<T>** nodes, int count) {$/;"	f	class:node2	access:public	signature:(node2<T>** nodes, int count)
+build_list	.\linked-list.h	/^	static node* build_list(T* items, int count) {$/;"	f	class:node	access:public	signature:(T* items, int count)
+data	.\flatten.cpp	/^		T data;$/;"	m	class:node2	file:	access:public
+data	.\linked-list.h	/^	T data;$/;"	m	class:node	access:public
+flatten	.\flatten.cpp	/^node2<T>* flatten(node2<T>* head, node2<T>** last = NULL) {$/;"	f	signature:(node2<T>* head, node2<T>** last = NULL)
+inode	.\flatten.cpp	/^typedef node2<int> inode;$/;"	t	file:
+inode	.\test.cpp	/^typedef node<int> inode;$/;"	t	file:
+isList	.\flatten.cpp	/^		bool isList;$/;"	m	class:node2	file:	access:public
+list	.\flatten.cpp	/^		node2<T> *list;$/;"	m	class:node2	file:	access:public
+main	.\flatten.cpp	/^int main() {$/;"	f	signature:()
+main	.\test.cpp	/^int main() {$/;"	f	signature:()
+next	.\flatten.cpp	/^		node2<T> *next;$/;"	m	class:node2	file:	access:public
+next	.\linked-list.h	/^	node *next;$/;"	m	class:node	access:public
+node	.\linked-list.h	/^	node(T t) {$/;"	f	class:node	access:public	signature:(T t)
+node	.\linked-list.h	/^class node {$/;"	c
+node2	.\flatten.cpp	/^		node2(T t) {$/;"	f	class:node2	access:public	signature:(T t)
+node2	.\flatten.cpp	/^		node2(node2 *nodes) {$/;"	f	class:node2	access:public	signature:(node2 *nodes)
+node2	.\flatten.cpp	/^class node2 {$/;"	c	file:
+node2::append	.\flatten.cpp	/^		static void append(node2** pHead, node2* n) {$/;"	f	class:node2	access:public	signature:(node2** pHead, node2* n)
+node2::build_list	.\flatten.cpp	/^		static node2* build_list(T* items, int count) {$/;"	f	class:node2	access:public	signature:(T* items, int count)
+node2::build_list	.\flatten.cpp	/^		static node2* build_list(node2<T>** nodes, int count) {$/;"	f	class:node2	access:public	signature:(node2<T>** nodes, int count)
+node2::data	.\flatten.cpp	/^		T data;$/;"	m	class:node2	file:	access:public
+node2::isList	.\flatten.cpp	/^		bool isList;$/;"	m	class:node2	file:	access:public
+node2::list	.\flatten.cpp	/^		node2<T> *list;$/;"	m	class:node2	file:	access:public
+node2::next	.\flatten.cpp	/^		node2<T> *next;$/;"	m	class:node2	file:	access:public
+node2::node2	.\flatten.cpp	/^		node2(T t) {$/;"	f	class:node2	access:public	signature:(T t)
+node2::node2	.\flatten.cpp	/^		node2(node2 *nodes) {$/;"	f	class:node2	access:public	signature:(node2 *nodes)
+node2::prepend	.\flatten.cpp	/^		static void prepend(node2<T>** pHead, node2<T>* n) {$/;"	f	class:node2	access:public	signature:(node2<T>** pHead, node2<T>* n)
+node::append	.\linked-list.h	/^	static void append(node** pHead, node* n) {$/;"	f	class:node	access:public	signature:(node** pHead, node* n)
+node::build_list	.\linked-list.h	/^	static node* build_list(T* items, int count) {$/;"	f	class:node	access:public	signature:(T* items, int count)
+node::data	.\linked-list.h	/^	T data;$/;"	m	class:node	access:public
+node::next	.\linked-list.h	/^	node *next;$/;"	m	class:node	access:public
+node::node	.\linked-list.h	/^	node(T t) {$/;"	f	class:node	access:public	signature:(T t)
+node::prepend	.\linked-list.h	/^	static void prepend(node** pHead, node* n) {$/;"	f	class:node	access:public	signature:(node** pHead, node* n)
+operator <<	.\flatten.cpp	/^ostream& operator << (ostream& o, const node2<T>* n) {$/;"	f	signature:(ostream& o, const node2<T>* n)
+operator <<	.\linked-list.h	/^std::ostream& operator << (std::ostream& o, node<T>* n) {$/;"	f	signature:(std::ostream& o, node<T>* n)
+prepend	.\flatten.cpp	/^		static void prepend(node2<T>** pHead, node2<T>* n) {$/;"	f	class:node2	access:public	signature:(node2<T>** pHead, node2<T>* n)
+prepend	.\linked-list.h	/^	static void prepend(node** pHead, node* n) {$/;"	f	class:node	access:public	signature:(node** pHead, node* n)
