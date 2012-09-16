@@ -84,22 +84,4 @@ TEST(SkipListTest, MultipleFind) {
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
-  /*
-  SkipList<int, std::string> s;
-  s.Insert(2, "Shrey");
-  s.Insert(1, "Banga");
-  s.Insert(3, "Alpha");
-  s.Insert(9, "Beta");
-  s.Insert(3, "Dude");
-  s.Dump();
-  std::cout << *s.Find(2) << " " << *s.Find(3);
-  s.Delete(2);
-  s.Dump();
-  s.Delete(9);
-  s.Dump();
-  s.Delete(3);
-  s.Dump();
-
-  return 0;
-  */
 }
