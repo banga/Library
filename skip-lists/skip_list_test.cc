@@ -1,7 +1,8 @@
+#include "skip_list.h"
+
 #include <iostream>
 #include <string>
 
-#include "skip_list.h"
 #include "gtest/gtest.h"
 
 using lib::SkipList;

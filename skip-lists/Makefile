@@ -1,5 +1,6 @@
 CC=g++
 CFLAGS=-Wall -g
+SRCS=skip_list.h skip_list.cc skip_list_test.cc
 OBJS=skip_list.o skip_list_test.o
 TARGETS=skip_list_test
 
@@ -26,6 +27,9 @@ skip_list_test: $(OBJS) libgtest.a
 
 test: skip_list_test
 	./skip_list_test
+
+lint:
+	cpplint.py --filter=-legal $(SRCS)
 
 clean:
 	rm $(OBJS) $(TARGETS) 

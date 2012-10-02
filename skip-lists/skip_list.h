@@ -1,11 +1,14 @@
+#ifndef SKIP_LISTS_SKIP_LIST_H_
+#define SKIP_LISTS_SKIP_LIST_H_
+
 namespace lib {
 
 double Random();
 
-template <typename K, typename V=K>
+template <typename K, typename V = K>
 class SkipList {
   public:
-    SkipList(int max_level=16, double p=0.5)
+    SkipList(int max_level = 16, double p = 0.5)
         : max_level_(max_level), p_(p) {
       header_ = new Node(K(), V(), max_level_);
       for (int i = 0; i <= max_level_; ++i)
@@ -89,7 +92,7 @@ class SkipList {
         n = n->next_[0];
         ++size;
       }
-      
+
       return size;
     }
 
@@ -125,3 +128,5 @@ class SkipList {
 };
 
 }  // namespace lib
+
+#endif  // SKIP_LISTS_SKIP_LIST_H_

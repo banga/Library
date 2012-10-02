@@ -4,7 +4,7 @@
 namespace lib {
 
 double Random() {
-  return random() / (double)RAND_MAX;
+  return random() / static_cast<double>(RAND_MAX);
 }
 
 }  // namespace lib
