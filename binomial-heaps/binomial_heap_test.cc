@@ -1,13 +1,10 @@
 #include "binomial_heap.h"
 
 #include <algorithm>
-#include <iostream>
 #include <vector>
 
 #include "gtest/gtest.h"
 
-using std::cout;
-using std::endl;
 using std::vector;
 using lib::BinomialHeap;
 
