@@ -30,21 +30,21 @@ TEST(DisjointSetTest, Union) {
     numbers.push_back(new DisjointSet<int>(i+2));
   }
 
-  for (int i = 0; i < numbers.size(); ++i) {
-    DisjointSet<int> *number = numbers[i];
-    if (IsEven(number->key())) {
-      even.Union(*number);
+  for (vector<DisjointSet<int>*>::iterator it = numbers.begin();
+      it != numbers.end(); ++it) {
+    if (IsEven((*it)->key())) {
+      even.Union(*it);
     } else {
-      odd.Union(*number);
+      odd.Union(*it);
     }
   }
 
-  for (int i = 0; i < numbers.size(); ++i) {
-    DisjointSet<int> *number = numbers[i];
-    DisjointSet<int> *set = number->FindSet();
+  for (vector<DisjointSet<int>*>::iterator it = numbers.begin();
+      it != numbers.end(); ++it) {
+    DisjointSet<int> *set = (*it)->FindSet();
     ASSERT_NE(set, static_cast<DisjointSet<int>*>(0));
 
-    int n = number->key(), representative = set->key();
+    int n = (*it)->key(), representative = set->key();
     EXPECT_EQ(IsEven(n), IsEven(representative));
   }
 }

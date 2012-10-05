@@ -15,7 +15,7 @@ class DisjointSet {
       return key_;
     }
 
-    DisjointSet(const Key& key)
+    explicit DisjointSet(const Key& key)
       : key_(key), rank_(1), parent_(this) { }
 
     DisjointSet* FindSet() {
@@ -24,8 +24,8 @@ class DisjointSet {
       return parent_;
     }
 
-    void Union(DisjointSet &other) {
-      DisjointSet *root = FindSet(), *other_root = other.FindSet();
+    void Union(DisjointSet *other) {
+      DisjointSet *root = FindSet(), *other_root = other->FindSet();
 
       if (root == other_root)
         return;
@@ -42,8 +42,8 @@ class DisjointSet {
 
   private:
     Key key_;
-    DisjointSet *parent_;
     int rank_;
+    DisjointSet *parent_;
 };
 
 }  // namespace lib
